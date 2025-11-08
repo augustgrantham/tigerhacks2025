@@ -49,7 +49,7 @@ func player_movement(delta):
 		play_anim(0)
 	move_and_slide()
 	var mouse_pos = get_global_mouse_position()
-	var angle = (mouse_pos - global_position).angle()
+	var angle = (mouse_pos - global_position).angle() - deg_to_rad(95)
 	$PointLight2D.rotation = lerp_angle($PointLight2D.rotation, angle, 10 * delta)
 	
 func play_anim(movement):

@@ -1,14 +1,29 @@
 extends CharacterBody2D
 
-var speed = 200
+@export var speed: float = 200.0
 
 var current_dir = "none"
+var flashlight_on := true
+var flicker_timer := 0.0
+
 
 func _ready():
 	$AnimatedSprite2D.play("front idle")
 
+func _process(delta: float) -> void:
+	flicker_timer += delta
+	if flicker_timer > 0.05:
+		flicker_timer = 0.0
+		if flashlight_on:
+			$PointLight2D.energy = randf_range(1.8, 2.2)
+
+	if Input.is_action_just_pressed("flashlight_toggle"):
+		flashlight_on = !flashlight_on
+		$PointLight2D.visible = flashlight_on
+
 func _physics_process(delta):
 	player_movement(delta)
+
 func player_movement(delta):
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("ui_right"):
@@ -33,7 +48,10 @@ func player_movement(delta):
 	if direction.length() == 0:
 		play_anim(0)
 	move_and_slide()
-
+	var mouse_pos = get_global_mouse_position()
+	var angle = (mouse_pos - global_position).angle()
+	$PointLight2D.rotation = lerp_angle($PointLight2D.rotation, angle, 10 * delta)
+	
 func play_anim(movement):
 	var dir = current_dir
 	var anim = $AnimatedSprite2D

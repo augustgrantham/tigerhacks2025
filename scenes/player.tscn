@@ -426,15 +426,16 @@ animations = [{
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0.25, -2)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_apa73")
-animation = &"front walk"
-frame = 1
-frame_progress = 0.03699776
+animation = &"side walk"
+frame = 2
+frame_progress = 0.97402084
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 scale = Vector2(3.8983715, 2.2343748)

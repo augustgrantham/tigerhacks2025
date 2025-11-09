@@ -1,7 +1,7 @@
 extends Control
-	
 func _ready():
-	AudioController.play_music()
+	print("step 1")
+	#audio_controller.play_music()
 func _on_start_button_pressed() -> void:
 	hide()
 	# 2. Change the scene

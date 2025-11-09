@@ -7,7 +7,7 @@ var current_dir = "none"
 var flashlight_on := true
 var flicker_timer := 0.0
 var health = 3
-
+var delay = false
 @export var can_use_tight_beam := true
 @export var is_tight_beam_active := false
 
@@ -62,22 +62,31 @@ func activate_tight_beam():
 	can_use_tight_beam = true
 func _physics_process(delta):
 	player_movement(delta)
-
+func walk():
+	if(!delay):
+		AudioController.play_walk()
+		delay = true
+		await get_tree().create_timer(0.75).timeout
+		delay = false
 func player_movement(delta):
 	var direction = Vector2.ZERO
 	if Input.is_action_pressed("ui_right"):
+		walk()
 		current_dir = "right"
 		play_anim(1)
 		direction.x += 1
 	if Input.is_action_pressed("ui_left"):
+		walk()
 		current_dir = "left"
 		play_anim(2)
 		direction.x -= 1
 	if Input.is_action_pressed("ui_up"):
+		walk()
 		play_anim(3)
 		current_dir = "up"
 		direction.y -= 1
 	if Input.is_action_pressed("ui_down"):
+		walk()
 		play_anim(4)
 		current_dir = "down"
 		direction.y += 1

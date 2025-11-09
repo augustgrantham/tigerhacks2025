@@ -6,7 +6,7 @@ signal blasting
 var current_dir = "none"
 var flashlight_on := true
 var flicker_timer := 0.0
-var health = 0
+var health = 3
 
 @export var can_use_tight_beam := true
 @export var is_tight_beam_active := false
@@ -126,10 +126,13 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 		print("youch")
 		health -= 1
 		on_take_damage()
-		await get_tree().create_timer(3.0).timeout
 		if(health <= 0):
 			queue_free()
+		await get_tree().create_timer(3.0).timeout
+		
 func on_take_damage():
 	for i in 4:
-		self_modulate.a = 0.5
-		self_modulate.a = 1.0
+		modulate = Color(1.0, 0.063, 0.035)
+		await get_tree().create_timer(0.5).timeout
+		self_modulate = Color(1.0, 1.0, 1.0)
+		

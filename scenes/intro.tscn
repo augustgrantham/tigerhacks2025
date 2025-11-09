@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciklx4e7lgjhd"]
+
+[ext_resource type="Script" uid="uid://ls5q7qse48vq" path="res://intro.gd" id="1_4bx60"]
+[ext_resource type="Texture2D" uid="uid://bb3m5n8yoxo55" path="res://menus/3.png" id="2_i2l1n"]
+[ext_resource type="Script" uid="uid://bycqdesskjjvi" path="res://sprite_2d.gd" id="3_wfs7u"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4bx60")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2518518, 0.25185186)
+texture = ExtResource("2_i2l1n")
+script = ExtResource("3_wfs7u")
+
+[node name="Camera2D" type="Camera2D" parent="."]

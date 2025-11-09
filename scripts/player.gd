@@ -18,8 +18,7 @@ func _process(delta: float) -> void:
 			$PointLight2D.energy = randf_range(1.8, 2.2)
 
 	if Input.is_action_just_pressed("flashlight_toggle"):
-		flashlight_on = !flashlight_on
-		$PointLight2D.visible = flashlight_on
+		print("pressed")
 
 func _physics_process(delta):
 	player_movement(delta)
@@ -51,6 +50,7 @@ func player_movement(delta):
 	var mouse_pos = get_global_mouse_position()
 	var angle = (mouse_pos - global_position).angle() - deg_to_rad(95)
 	$PointLight2D.rotation = lerp_angle($PointLight2D.rotation, angle, 10 * delta)
+	
 	
 func play_anim(movement):
 	var dir = current_dir

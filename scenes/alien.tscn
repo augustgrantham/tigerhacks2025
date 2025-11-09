@@ -135,9 +135,10 @@ animations = [{
 radius = 106.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vbw7"]
-size = Vector2(10, 18)
+size = Vector2(15, 21)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
 script = ExtResource("1_np108")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -153,7 +154,6 @@ priority = 1
 shape = SubResource("CircleShape2D_3vbw7")
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_3vbw7")
 
 [connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]

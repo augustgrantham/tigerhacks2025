@@ -137,5 +137,5 @@ position = Vector2(1659, 186)
 [node name="Alien 7" parent="World/Enemies" instance=ExtResource("10_w7kh3")]
 position = Vector2(1646, -223)
 
-[node name="Cutscene" type="Control" parent="."]
+[node name="StartMenu" type="Control" parent="."]
 anchors_preset = 0

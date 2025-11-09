@@ -1,9 +1,7 @@
-[gd_scene load_steps=16 format=4 uid="uid://7evstgekap24"]
+[gd_scene load_steps=15 format=4 uid="uid://7evstgekap24"]
 
 [ext_resource type="PackedScene" uid="uid://dfqg8lp0roiv5" path="res://scenes/spawn.tscn" id="1_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://d20q2rs376ppe" path="res://escape_pod.tscn" id="1_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://dl5med4hn5t14" path="res://scenes/player.tscn" id="1_nnsk1"]
-[ext_resource type="Script" uid="uid://dargdb0tx03tu" path="res://scenes/world.gd" id="1_o8fc1"]
 [ext_resource type="Texture2D" uid="uid://dbkw3tcrhqdfj" path="res://assets/tilesets/black.png" id="1_qfnet"]
 [ext_resource type="PackedScene" uid="uid://bigqhxi0wvssu" path="res://scenes/stress.tscn" id="2_k0juu"]
 [ext_resource type="PackedScene" uid="uid://dydgfkvsxwllk" path="res://scenes/thirdRoom.tscn" id="3_71j4m"]
@@ -12,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://bklmu8kv2r8e8" path="res://scenes/cafeteria.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://ihtodum1r4j2" path="res://scenes/escapeRoom.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://45an4hhuul2k" path="res://scenes/alien.tscn" id="10_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://dvaeftnowthcy" path="res://scenes/escape_pod.tscn" id="12_jhx03"]
 [ext_resource type="PackedScene" uid="uid://dwy5f53ojb1fr" path="res://key.tscn" id="12_q5onr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7141"]
@@ -63,7 +62,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="World" type="Node2D" parent="."]
-script = ExtResource("1_o8fc1")
 
 [node name="Key" parent="World" instance=ExtResource("12_q5onr")]
 z_index = 1
@@ -128,6 +126,6 @@ position = Vector2(1659, 186)
 [node name="Alien 7" parent="World/Enemies" instance=ExtResource("10_w7kh3")]
 position = Vector2(1646, -223)
 
-[node name="CharacterBody2D" parent="World" instance=ExtResource("1_e3hyu")]
+[node name="CharacterBody2D" parent="." instance=ExtResource("12_jhx03")]
 z_index = 1
-position = Vector2(1159, -272)
+position = Vector2(1212, -281)

@@ -8,7 +8,7 @@ var flicker_timer := 0.0
 
 
 func _ready():
-	$AnimatedSprite2D.play("idle")
+	$AnimatedSprite2D.play("front idle")
 
 func _process(delta: float) -> void:
 	flicker_timer += delta

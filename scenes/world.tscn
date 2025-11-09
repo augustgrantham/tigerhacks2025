@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://7evstgekap24"]
+[gd_scene load_steps=15 format=4 uid="uid://7evstgekap24"]
 
 [ext_resource type="PackedScene" uid="uid://dfqg8lp0roiv5" path="res://scenes/spawn.tscn" id="1_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://d20q2rs376ppe" path="res://escape_pod.tscn" id="1_e3hyu"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bklmu8kv2r8e8" path="res://scenes/cafeteria.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://ihtodum1r4j2" path="res://scenes/escapeRoom.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://45an4hhuul2k" path="res://scenes/alien.tscn" id="10_w7kh3"]
+[ext_resource type="PackedScene" uid="uid://dwy5f53ojb1fr" path="res://key.tscn" id="12_q5onr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7141"]
 texture = ExtResource("1_qfnet")
@@ -55,6 +56,10 @@ texture = ExtResource("1_qfnet")
 sources/0 = SubResource("TileSetAtlasSource_i7141")
 
 [node name="World" type="Node2D"]
+
+[node name="Key" parent="." instance=ExtResource("12_q5onr")]
+z_index = 1
+position = Vector2(1123, 273)
 
 [node name="EscapePod" parent="." instance=ExtResource("1_e3hyu")]
 light_mask = 3

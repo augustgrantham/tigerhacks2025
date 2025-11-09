@@ -6,6 +6,7 @@ signal blasting
 var current_dir = "none"
 var flashlight_on := true
 var flicker_timer := 0.0
+var health = 0
 
 @export var can_use_tight_beam := true
 @export var is_tight_beam_active := false
@@ -118,3 +119,17 @@ func play_anim(movement):
 				anim.play("front walk")
 			elif movement == 0:
 				anim.play("idle")
+
+
+func _on_hit_area_body_entered(body: Node2D) -> void:
+	if(body.name.begins_with("Alien")):
+		print("youch")
+		health -= 1
+		on_take_damage()
+		await get_tree().create_timer(3.0).timeout
+		if(health <= 0):
+			queue_free()
+func on_take_damage():
+	for i in 4:
+		self_modulate.a = 0.5
+		self_modulate.a = 1.0

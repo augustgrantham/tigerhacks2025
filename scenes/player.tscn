@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dl5med4hn5t14"]
+[gd_scene load_steps=25 format=3 uid="uid://dl5med4hn5t14"]
 
 [ext_resource type="Script" uid="uid://bq7h68rkqacne" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cm0sl3i4elo2k" path="res://assets/run-back-Sheet.png" id="2_dqkch"]
@@ -150,6 +150,9 @@ size = Vector2(8, 15)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
 size = Vector2(5.324673, 106.163605)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuyoq"]
+size = Vector2(10, 17)
+
 [node name="player" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
@@ -179,3 +182,13 @@ position = Vector2(1.1920929e-07, 55.944065)
 scale = Vector2(1.0750003, 1.075)
 shape = SubResource("RectangleShape2D_qlg0r")
 disabled = true
+
+[node name="hitArea" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitArea"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tuyoq")
+
+[connection signal="body_entered" from="hitArea" to="." method="_on_hit_area_body_entered"]

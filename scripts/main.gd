@@ -3,10 +3,8 @@ extends Node
 # Use these constants for clarity instead of string paths
 const START_MENU_SCENE = preload("res://scenes/menu.tscn")
 const WORLD_SCENE = preload("res://scenes/world.tscn")
-# const END_SCENE = preload("res://scenes/end_scene.tscn") 
-# const WIN_SCENE = preload("res://scenes/win_scene.tscn") 
-# to be implemented - end scene, win scene
-
+const END_SCENE = preload("res://scenes/end_scene.tscn") 
+const WIN_SCENE = preload("res://scenes/win_scene.tscn") 
 # Store a reference to the currently active child scene
 var current_scene = null
 
@@ -40,7 +38,7 @@ func change_scene(next_scene_resource):
 func start_game():
 	change_scene(WORLD_SCENE)
 # Call this when the player dies or meets a win condition in the World scene
-# func game_over():
-# change_scene(END_SCENE)
-# func game_win():
-# change_scene(WIN_SCENE)
+func game_over():
+	change_scene(END_SCENE)
+func game_win():
+	change_scene(WIN_SCENE)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dl5med4hn5t14"]
+[gd_scene load_steps=24 format=3 uid="uid://dl5med4hn5t14"]
 
 [ext_resource type="Script" uid="uid://bq7h68rkqacne" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cm0sl3i4elo2k" path="res://assets/run-back-Sheet.png" id="2_dqkch"]
@@ -145,10 +145,12 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(14.5, 22)
+size = Vector2(8, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
+size = Vector2(5.324673, 106.163605)
 
 [node name="player" type="CharacterBody2D"]
-z_index = 5
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_g2els")
@@ -158,7 +160,7 @@ sprite_frames = SubResource("SpriteFrames_42b1b")
 animation = &"back idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -169,3 +171,11 @@ shadow_enabled = true
 texture = ExtResource("3_qhqgy")
 offset = Vector2(0, 58.785)
 texture_scale = 0.09
+
+[node name="Area2D" type="Area2D" parent="PointLight2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PointLight2D/Area2D"]
+position = Vector2(1.1920929e-07, 55.944065)
+scale = Vector2(1.0750003, 1.075)
+shape = SubResource("RectangleShape2D_qlg0r")
+disabled = true

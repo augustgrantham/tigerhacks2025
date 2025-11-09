@@ -1,38 +1,57 @@
 extends CharacterBody2D
-
-
+var wander_direction = Vector2.ZERO
+var wander_timer = 0.0
+var health = 3;
 var speed = 50
 var player_chase = false
 var player = null
+var damaged = false
+
 func _physics_process(delta):
-	# 
-
 	if player_chase and is_instance_valid(player):
-		# 1. Calculate the direction vector from the alien to the player
-		# global_position.direction_to() gives a normalized vector (length 1)
+		wander_timer = 0
 		var direction = global_position.direction_to(player.global_position)
-		
-		# 2. Set the CharacterBody2D's velocity
-		# Velocity = Direction * Speed (e.g., Vector2(1, 0) * 250)
-		velocity = direction * speed
-		
-		# 3. Apply the movement and handle collisions
-		# move_and_slide() automatically uses 'delta' and handles physics
-		move_and_slide()
+		speed = 50
+		velocity = direction * speed 
 	else:
-		# Stop movement when not chasing
-		velocity = Vector2.ZERO
-		move_and_slide()
-
+		if wander_timer <= 0.0:
+			wander_timer = 5.0
+			if randf() < 0.5:
+				wander_direction = Vector2.ZERO
+			else:
+				var rand_x = randf_range(-1.0, 1.0)
+				var rand_y = randf_range(-1.0, 1.0)
+				wander_direction = Vector2(rand_x, rand_y).normalized()
+		if wander_timer <= 1.5:
+			speed = 0
+		else:
+			speed = 17
+		velocity = velocity.lerp(wander_direction * speed, 0.1) # smooth turn
+	wander_timer -= delta
+	move_and_slide()
 # --- Area Detection Functions ---
 func _on_detection_area_body_entered(body):
 	print("Detected body: ", body.name) # Check the Output panel for this line
 	# Good practice: Add a check to ensure you're only chasing the player
 	if body.name == "player": # or check its group, e.g., 'if body.is_in_group("player"):'
 		player = body
-		player_chase = true
-		
+		player_chase = true		
 func _on_detection_area_body_exited(body):
 	if body == player:
 		player = null
 		player_chase = false
+
+
+
+
+
+func _on_hit_area_area_entered(area: Area2D) -> void:
+	if area.name == "Area2D":
+		if(!damaged):
+			health -= 1
+			damaged = true
+			$AnimatedSprite2D.skew += .25
+			if(health == 0):
+				queue_free()
+			await get_tree().create_timer(3.0).timeout
+			damaged = false

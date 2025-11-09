@@ -84,9 +84,12 @@ tile_set = SubResource("TileSet_71j4m")
 [node name="makeitAllDark" type="CanvasModulate" parent="."]
 color = Color(0.5370113, 0.5370113, 0.5370113, 1)
 
-[node name="player" parent="." instance=ExtResource("1_nnsk1")]
-
-[node name="Camera2D" type="Camera2D" parent="player"]
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("10_w7kh3")]
 position = Vector2(122, -35)
+
+[node name="player" parent="." instance=ExtResource("1_nnsk1")]
+light_mask = 3
+visibility_layer = 3
+z_index = 2
+
+[node name="Camera2D" type="Camera2D" parent="player"]

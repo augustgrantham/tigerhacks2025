@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://45an4hhuul2k"]
+[gd_scene load_steps=20 format=3 uid="uid://45an4hhuul2k"]
 
 [ext_resource type="Texture2D" uid="uid://lr7mpw5nnh05" path="res://assets/player_animations/alien-back-Sheet.png" id="1_3vbw7"]
 [ext_resource type="Script" uid="uid://be6qxdeli2wqb" path="res://scripts/alien.gd" id="1_np108"]
@@ -132,10 +132,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3vbw7"]
-radius = 202.06187
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_np108"]
-size = Vector2(16, 22)
+radius = 106.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vbw7"]
 size = Vector2(15, 21)
@@ -158,16 +155,11 @@ priority = 1
 [node name="detectionhitbox" type="CollisionShape2D" parent="detectionArea"]
 shape = SubResource("CircleShape2D_3vbw7")
 
-[node name="hitArea" type="Area2D" parent="."]
-
-[node name="hitbox" type="CollisionShape2D" parent="hitArea"]
-shape = SubResource("RectangleShape2D_np108")
-
-[node name="collisionbox" type="CollisionShape2D" parent="."]
+[node name="hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_3vbw7")
 
+[connection signal="area_entered" from="detectionArea" to="." method="_on_detection_area_area_entered"]
 [connection signal="area_shape_entered" from="detectionArea" to="." method="_on_detection_area_area_shape_entered"]
 [connection signal="body_entered" from="detectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_shape_entered" from="detectionArea" to="." method="_on_detection_area_body_shape_entered"]
-[connection signal="area_entered" from="hitArea" to="." method="_on_hit_area_area_entered"]

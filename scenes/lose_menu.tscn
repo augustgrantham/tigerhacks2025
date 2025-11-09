@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://5uap056ot43n"]
+
+[ext_resource type="Texture2D" uid="uid://dvxtb828w1uo7" path="res://menus/6.png" id="1_mykn2"]
+[ext_resource type="Script" uid="uid://b7rx5aea3u0v2" path="res://lose_menu.gd" id="1_wu46t"]
+
+[node name="Lose Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu46t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.26481476, 0.26481482)
+texture = ExtResource("1_mykn2")
+
+[node name="restart_button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.3372549)
+layout_mode = 0
+offset_left = 127.0
+offset_top = 81.0
+offset_right = 200.0
+offset_bottom = 102.0
+
+[node name="menu_button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.17254902)
+layout_mode = 0
+offset_left = -214.0
+offset_top = 81.0
+offset_right = -119.35713
+offset_bottom = 101.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="restart_button" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="menu_button" to="." method="_on_menu_button_pressed"]

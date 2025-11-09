@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://dhn1rr67feg3a"]
+[gd_scene load_steps=3 format=3 uid="uid://dhn1rr67feg3a"]
+
+[ext_resource type="Script" uid="uid://cp4k6a0e44m8m" path="res://scenes/menu.gd" id="1_upctu"]
+[ext_resource type="Texture2D" uid="uid://ch635ip1t3rn3" path="res://assets/start.png" id="2_11y2r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -7,3 +10,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_upctu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_11y2r")
+
+[node name="Start_button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.3372549)
+layout_mode = 0
+offset_left = -67.0
+offset_top = 40.0
+offset_right = 61.0
+offset_bottom = 82.0
+
+[node name="credits_button" type="Button" parent="."]
+modulate = Color(1, 1, 1, 0.17254902)
+layout_mode = 0
+offset_left = -48.0
+offset_top = 112.0
+offset_right = 48.0
+offset_bottom = 134.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="credits_button" to="." method="_on_credits_button_pressed"]

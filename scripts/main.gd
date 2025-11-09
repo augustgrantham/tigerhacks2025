@@ -3,12 +3,13 @@ extends Node
 # Use these constants for clarity instead of string paths
 const START_MENU_SCENE = preload("res://scenes/menu.tscn")
 const WORLD_SCENE = preload("res://scenes/world.tscn")
-const END_SCENE = preload("res://scenes/end_scene.tscn") 
+const END_SCENE = preload("res://scenes/lose_menu.tscn") 
 const WIN_SCENE = preload("res://scenes/win_scene.tscn") 
 # Store a reference to the currently active child scene
 var current_scene = null
 
 func _ready():
+	print(current_scene)
 	# Load the starting scene (the Start Menu) first
 	# If you want to start directly in the World, change this line:
 	change_scene(START_MENU_SCENE) 
@@ -17,6 +18,7 @@ func _ready():
 func change_scene(next_scene_resource):
 	# 1. Check if a scene is currently running and remove it
 	if current_scene:
+		print("Im removed!")
 		current_scene.queue_free() # Safely remove the old scene
 		current_scene = null
 
@@ -28,7 +30,6 @@ func change_scene(next_scene_resource):
 	
 	# 4. Update the reference
 	current_scene = new_scene_instance
-	
 	print("Changed scene to: " + next_scene_resource.get_path())
 
 

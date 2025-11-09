@@ -127,7 +127,9 @@ func _on_hit_area_body_entered(body: Node2D) -> void:
 		health -= 1
 		on_take_damage()
 		if(health <= 0):
-			queue_free()
+			hide()
+		# 2. Change the scene
+			get_tree().call_deferred("change_scene_to_file", "res://scenes/lose_menu.tscn")
 		await get_tree().create_timer(3.0).timeout
 		
 func on_take_damage():

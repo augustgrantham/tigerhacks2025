@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dvaeftnowthcy"]
+
+[ext_resource type="Script" path="res://scripts/escape_pod.gd" id="1_c3o0n"]
+[ext_resource type="Texture2D" uid="uid://qr77ykx3msjg" path="res://assets/escapepods.png" id="2_c3o0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3o0n"]
+size = Vector2(139, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlhiv"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+scale = Vector2(1.56, 1.56)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_c3o0n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_c3o0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8146973e-06, 5.722046e-06)
+scale = Vector2(0.74822694, 0.74822694)
+texture = ExtResource("2_c3o0n")
+
+[node name="exitArea" type="Area2D" parent="."]
+
+[node name="exitBlock" type="CollisionShape2D" parent="exitArea"]
+position = Vector2(48, 13)
+shape = SubResource("RectangleShape2D_dlhiv")
+
+[connection signal="body_entered" from="exitArea" to="." method="_on_exit_area_body_entered"]

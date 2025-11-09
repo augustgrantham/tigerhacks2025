@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dvaeftnowthcy"]
 
-[ext_resource type="Script" path="res://scripts/escape_pod.gd" id="1_c3o0n"]
+[ext_resource type="Script" uid="uid://oqem6x5w6vwy" path="res://scenes/escape_pod.gd" id="1_r7ajw"]
 [ext_resource type="Texture2D" uid="uid://qr77ykx3msjg" path="res://assets/escapepods.png" id="2_c3o0n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c3o0n"]
@@ -12,7 +12,7 @@ size = Vector2(139, 37)
 scale = Vector2(1.56, 1.56)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("1_c3o0n")
+script = ExtResource("1_r7ajw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -1.5)

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://3yvctalirqs3"
-path="res://.godot/imported/Misc_EnergyBlastRise.wav-b89a439fd51c57c27a09bbb4fc3d88e3.sample"
+path="res://.godot/imported/Misc_EnergyBlastRise.wav-f762bd60b8aec474fb585f5ba9f5ee41.sample"
 
 [deps]
 
-source_file="res://Misc_EnergyBlastRise.wav"
-dest_files=["res://.godot/imported/Misc_EnergyBlastRise.wav-b89a439fd51c57c27a09bbb4fc3d88e3.sample"]
+source_file="res://sounds/Misc_EnergyBlastRise.wav"
+dest_files=["res://.godot/imported/Misc_EnergyBlastRise.wav-f762bd60b8aec474fb585f5ba9f5ee41.sample"]
 
 [params]
 

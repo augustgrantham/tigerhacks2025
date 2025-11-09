@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c0vrgjf1vaav0"
-path="res://.godot/imported/Misc_GlitchNoisy6.wav-f09b8a89140be112656afd2ee78ca23c.sample"
+path="res://.godot/imported/Misc_GlitchNoisy6.wav-4bf536b3893fe37140d54333a258a5f4.sample"
 
 [deps]
 
-source_file="res://Misc_GlitchNoisy6.wav"
-dest_files=["res://.godot/imported/Misc_GlitchNoisy6.wav-f09b8a89140be112656afd2ee78ca23c.sample"]
+source_file="res://sounds/Misc_GlitchNoisy6.wav"
+dest_files=["res://.godot/imported/Misc_GlitchNoisy6.wav-4bf536b3893fe37140d54333a258a5f4.sample"]
 
 [params]
 

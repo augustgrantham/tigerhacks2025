@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0ufmfyturjrs"
-path="res://.godot/imported/Amb_Space_Groan_LOOP.wav-2967b4a47ae7dcc16d90881a29155754.sample"
+path="res://.godot/imported/Amb_Space_Groan_LOOP.wav-d1cabfde48cbd1db64ca1dbddb59d565.sample"
 
 [deps]
 
-source_file="res://Amb_Space_Groan_LOOP.wav"
-dest_files=["res://.godot/imported/Amb_Space_Groan_LOOP.wav-2967b4a47ae7dcc16d90881a29155754.sample"]
+source_file="res://sounds/Amb_Space_Groan_LOOP.wav"
+dest_files=["res://.godot/imported/Amb_Space_Groan_LOOP.wav-d1cabfde48cbd1db64ca1dbddb59d565.sample"]
 
 [params]
 

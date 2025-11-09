@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cbfbkt7e368ek"
-path="res://.godot/imported/Amb_Space_Hiss_LOOP.wav-a519e78ed2e4f071f19eb2d9a69467ce.sample"
+path="res://.godot/imported/Amb_Space_Hiss_LOOP.wav-95af9b8ed71678e437f57d8cc0c1dda0.sample"
 
 [deps]
 
-source_file="res://Amb_Space_Hiss_LOOP.wav"
-dest_files=["res://.godot/imported/Amb_Space_Hiss_LOOP.wav-a519e78ed2e4f071f19eb2d9a69467ce.sample"]
+source_file="res://sounds/Amb_Space_Hiss_LOOP.wav"
+dest_files=["res://.godot/imported/Amb_Space_Hiss_LOOP.wav-95af9b8ed71678e437f57d8cc0c1dda0.sample"]
 
 [params]
 

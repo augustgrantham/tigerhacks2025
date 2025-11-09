@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+AudioController="*res://scripts/audio_controller.gd"
 global="*res://global.gd"
 
 [display]

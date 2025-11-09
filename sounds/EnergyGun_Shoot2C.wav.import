@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cnjo2gx3kdc06"
-path="res://.godot/imported/EnergyGun_Shoot2C.wav-b9c4f07e64fda99ce29a5c44e31c60c1.sample"
+path="res://.godot/imported/EnergyGun_Shoot2C.wav-b12c109f0a98e6ced4ce560c1fa7a785.sample"
 
 [deps]
 
-source_file="res://EnergyGun_Shoot2C.wav"
-dest_files=["res://.godot/imported/EnergyGun_Shoot2C.wav-b9c4f07e64fda99ce29a5c44e31c60c1.sample"]
+source_file="res://sounds/EnergyGun_Shoot2C.wav"
+dest_files=["res://.godot/imported/EnergyGun_Shoot2C.wav-b12c109f0a98e6ced4ce560c1fa7a785.sample"]
 
 [params]
 

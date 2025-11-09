@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://0eo0gp0bey6c"
-path="res://.godot/imported/Misc_ElectricBuzzSweep.wav-fb2f5c461d36beb078fb58516ad2e90a.sample"
+path="res://.godot/imported/Misc_ElectricBuzzSweep.wav-0e3798eb2d2b960330d05a6faa0cb4a1.sample"
 
 [deps]
 
-source_file="res://Misc_ElectricBuzzSweep.wav"
-dest_files=["res://.godot/imported/Misc_ElectricBuzzSweep.wav-fb2f5c461d36beb078fb58516ad2e90a.sample"]
+source_file="res://sounds/Misc_ElectricBuzzSweep.wav"
+dest_files=["res://.godot/imported/Misc_ElectricBuzzSweep.wav-0e3798eb2d2b960330d05a6faa0cb4a1.sample"]
 
 [params]
 

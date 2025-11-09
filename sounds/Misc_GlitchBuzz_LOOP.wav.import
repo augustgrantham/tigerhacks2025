@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b6gmrhtmbvjl0"
-path="res://.godot/imported/Misc_GlitchBuzz_LOOP.wav-6230ebddb9bae4e0f581084e670c8649.sample"
+path="res://.godot/imported/Misc_GlitchBuzz_LOOP.wav-5cb41d7457fa37489df007e1d7852371.sample"
 
 [deps]
 
-source_file="res://Misc_GlitchBuzz_LOOP.wav"
-dest_files=["res://.godot/imported/Misc_GlitchBuzz_LOOP.wav-6230ebddb9bae4e0f581084e670c8649.sample"]
+source_file="res://sounds/Misc_GlitchBuzz_LOOP.wav"
+dest_files=["res://.godot/imported/Misc_GlitchBuzz_LOOP.wav-5cb41d7457fa37489df007e1d7852371.sample"]
 
 [params]
 

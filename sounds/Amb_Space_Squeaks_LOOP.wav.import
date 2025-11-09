@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dmd8i12oenrhx"
-path="res://.godot/imported/Amb_Space_Squeaks_LOOP.wav-7ad00e8f58d40ca218aca3f67acfc275.sample"
+path="res://.godot/imported/Amb_Space_Squeaks_LOOP.wav-a106fdbd251c3c08467154c0f632ffb3.sample"
 
 [deps]
 
-source_file="res://Amb_Space_Squeaks_LOOP.wav"
-dest_files=["res://.godot/imported/Amb_Space_Squeaks_LOOP.wav-7ad00e8f58d40ca218aca3f67acfc275.sample"]
+source_file="res://sounds/Amb_Space_Squeaks_LOOP.wav"
+dest_files=["res://.godot/imported/Amb_Space_Squeaks_LOOP.wav-a106fdbd251c3c08467154c0f632ffb3.sample"]
 
 [params]
 

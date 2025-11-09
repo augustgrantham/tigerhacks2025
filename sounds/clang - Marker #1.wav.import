@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ccf6uyi0xfcs5"
-path="res://.godot/imported/clang - Marker #1.wav-b063c7094ec0e7fcb1fb6f6b258c9e2d.sample"
+path="res://.godot/imported/clang - Marker #1.wav-34947186f33c3f0b07429cb86ce74f6e.sample"
 
 [deps]
 
-source_file="res://clang - Marker #1.wav"
-dest_files=["res://.godot/imported/clang - Marker #1.wav-b063c7094ec0e7fcb1fb6f6b258c9e2d.sample"]
+source_file="res://sounds/clang - Marker #1.wav"
+dest_files=["res://.godot/imported/clang - Marker #1.wav-34947186f33c3f0b07429cb86ce74f6e.sample"]
 
 [params]
 

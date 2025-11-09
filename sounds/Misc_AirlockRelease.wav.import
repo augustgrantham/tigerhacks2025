@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2j4dftjknpt4"
-path="res://.godot/imported/Misc_AirlockRelease.wav-302a59724dcf475af33ce7978550a1d3.sample"
+path="res://.godot/imported/Misc_AirlockRelease.wav-2dd541bfd5ad4def9451c10f96a1ec56.sample"
 
 [deps]
 
-source_file="res://Misc_AirlockRelease.wav"
-dest_files=["res://.godot/imported/Misc_AirlockRelease.wav-302a59724dcf475af33ce7978550a1d3.sample"]
+source_file="res://sounds/Misc_AirlockRelease.wav"
+dest_files=["res://.godot/imported/Misc_AirlockRelease.wav-2dd541bfd5ad4def9451c10f96a1ec56.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bm46aq1i06nfc"
-path="res://.godot/imported/Amb_Engine_LOOP.wav-73729248b7522bf3815e9819788b683a.sample"
+path="res://.godot/imported/Amb_Engine_LOOP.wav-f092232f995a7132978c91454c09cf0e.sample"
 
 [deps]
 
-source_file="res://Amb_Engine_LOOP.wav"
-dest_files=["res://.godot/imported/Amb_Engine_LOOP.wav-73729248b7522bf3815e9819788b683a.sample"]
+source_file="res://sounds/Amb_Engine_LOOP.wav"
+dest_files=["res://.godot/imported/Amb_Engine_LOOP.wav-f092232f995a7132978c91454c09cf0e.sample"]
 
 [params]
 

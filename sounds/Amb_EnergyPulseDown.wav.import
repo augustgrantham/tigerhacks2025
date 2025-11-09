@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://jcrj8ebhrmbg"
-path="res://.godot/imported/Amb_EnergyPulseDown.wav-e8721eb1b7d80952a879c1615a42d004.sample"
+path="res://.godot/imported/Amb_EnergyPulseDown.wav-2368c4e007a1412dca68c22f06c3f811.sample"
 
 [deps]
 
-source_file="res://Amb_EnergyPulseDown.wav"
-dest_files=["res://.godot/imported/Amb_EnergyPulseDown.wav-e8721eb1b7d80952a879c1615a42d004.sample"]
+source_file="res://sounds/Amb_EnergyPulseDown.wav"
+dest_files=["res://.godot/imported/Amb_EnergyPulseDown.wav-2368c4e007a1412dca68c22f06c3f811.sample"]
 
 [params]
 

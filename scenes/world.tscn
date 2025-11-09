@@ -74,6 +74,7 @@ z_index = 1
 position = Vector2(1142, -279)
 
 [node name="MakeitBright" type="DirectionalLight2D" parent="World"]
+visible = false
 energy = 2.8
 
 [node name="rooms" type="Node" parent="World"]
@@ -134,4 +135,5 @@ position = Vector2(1659, 186)
 [node name="Alien 7" parent="World/Enemies" instance=ExtResource("10_w7kh3")]
 position = Vector2(1646, -223)
 
-[node name="Cutscene" type="AnimationPlayer" parent="."]
+[node name="Cutscene" type="Control" parent="."]
+anchors_preset = 0

@@ -14,6 +14,9 @@ func play_walk():
 func play_alien_walk():
 	$AlienWalking.play()
 	
-	
+func pickup():
+	$pickup.play()
+func leave():
+	$leave.play()
 func play_ambience():
 	$Ambient.play()

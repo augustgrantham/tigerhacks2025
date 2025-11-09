@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhn1rr67feg3a"]
+[gd_scene load_steps=4 format=3 uid="uid://dhn1rr67feg3a"]
 
 [ext_resource type="Script" uid="uid://cp4k6a0e44m8m" path="res://scripts/menu.gd" id="1_upctu"]
 [ext_resource type="Texture2D" uid="uid://ch635ip1t3rn3" path="res://assets/start.png" id="2_11y2r"]
+[ext_resource type="VideoStream" uid="uid://cnjhgu47wcdar" path="res://menus/Menu.ogv" id="3_11y2r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,10 +14,12 @@ grow_vertical = 2
 script = ExtResource("1_upctu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_11y2r")
 
 [node name="Start_button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.3372549)
+top_level = true
 layout_mode = 0
 offset_left = -67.0
 offset_top = 40.0
@@ -25,13 +28,32 @@ offset_bottom = 82.0
 
 [node name="credits_button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.17254902)
+top_level = true
 layout_mode = 0
 offset_left = -48.0
-offset_top = 112.0
+offset_top = 92.0
 offset_right = 48.0
-offset_bottom = 134.0
+offset_bottom = 114.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="."]
+show_behind_parent = true
+visibility_layer = 1023
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -255.0
+offset_top = -119.0
+offset_right = 1617.0
+offset_bottom = 940.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.26, 0.26)
+stream = ExtResource("3_11y2r")
+autoplay = true
+loop = true
 
 [connection signal="pressed" from="Start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="credits_button" to="." method="_on_credits_button_pressed"]

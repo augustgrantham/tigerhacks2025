@@ -19,6 +19,8 @@ func _physics_process(delta):
 		wander_timer = 0
 		var direction = global_position.direction_to(player.global_position)
 		speed = 50
+		if(damaged):
+				speed *= 0.66
 		velocity = direction * speed 
 		walk()
 	else:
@@ -35,6 +37,8 @@ func _physics_process(delta):
 			speed = 0
 		else:
 			speed = 17
+			if(damaged):
+				speed *= 0.66
 		velocity = velocity.lerp(wander_direction * speed, 0.1) # smooth turn
 	wander_timer -= delta
 	

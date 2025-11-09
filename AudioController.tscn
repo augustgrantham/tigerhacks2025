@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdij2pi4qero6"]
+[gd_scene load_steps=7 format=3 uid="uid://cdij2pi4qero6"]
 
 [ext_resource type="AudioStream" uid="uid://cvrjo2atq2qq5" path="res://sounds/SpookingDigitalSoundTH25.wav" id="1_dmab2"]
 [ext_resource type="Script" uid="uid://nioh5tthn7we" path="res://scripts/audio_controller.gd" id="1_kgd4t"]
 [ext_resource type="AudioStream" uid="uid://ccf6uyi0xfcs5" path="res://sounds/clang - Marker #1.wav" id="3_i4c22"]
 [ext_resource type="AudioStream" uid="uid://blbxa8dmu5q6r" path="res://sounds/Amb_Space_Noise_LOOP.wav" id="4_0snrf"]
+[ext_resource type="AudioStream" uid="uid://0eo0gp0bey6c" path="res://sounds/Misc_ElectricBuzzSweep.wav" id="5_0snrf"]
+[ext_resource type="AudioStream" uid="uid://d2j4dftjknpt4" path="res://sounds/Misc_AirlockRelease.wav" id="6_jhfgc"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_kgd4t")
@@ -24,3 +26,11 @@ pitch_scale = 2.32
 [node name="Ambient" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_0snrf")
 volume_db = -21.767
+
+[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0snrf")
+volume_db = 8.466
+
+[node name="leave" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_jhfgc")
+volume_db = 18.0

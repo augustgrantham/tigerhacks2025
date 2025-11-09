@@ -8,6 +8,7 @@ var flashlight_on := true
 var flicker_timer := 0.0
 var health = 3
 var delay = false
+var delay2 = false
 @export var can_use_tight_beam := true
 @export var is_tight_beam_active := false
 

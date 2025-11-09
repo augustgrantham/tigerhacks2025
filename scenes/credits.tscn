@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3onrl1kpl606"]
+[gd_scene load_steps=4 format=3 uid="uid://b3onrl1kpl606"]
 
 [ext_resource type="Script" uid="uid://bna286k74p3nm" path="res://scenes/credits.gd" id="1_2ckv8"]
 [ext_resource type="Texture2D" uid="uid://dhgh5jq2nxxio" path="res://menus/DarkShip.png" id="2_0ctdu"]
+[ext_resource type="VideoStream" uid="uid://dmdjswd612q2m" path="res://menus/Credits.ogv" id="3_0ctdu"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -13,16 +14,37 @@ grow_vertical = 2
 script = ExtResource("1_2ckv8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 scale = Vector2(0.26152703, 0.2615271)
 texture = ExtResource("2_0ctdu")
 
 [node name="menu_button" type="Button" parent="."]
 modulate = Color(1, 1, 1, 0.17254902)
+top_level = true
 layout_mode = 0
+offset_left = -237.0
+offset_top = 115.0
+offset_right = -189.0
+offset_bottom = 136.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+show_behind_parent = true
+visibility_layer = 1023
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 offset_left = -246.0
 offset_top = 111.0
-offset_right = -198.0
-offset_bottom = 132.0
+offset_right = 1626.0
+offset_bottom = 1170.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.26, 0.29)
+pivot_offset = Vector2(0, -390)
+stream = ExtResource("3_0ctdu")
+autoplay = true
+loop = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

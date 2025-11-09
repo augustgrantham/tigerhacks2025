@@ -12,8 +12,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_aw8vk")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(13, 0)
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(29, 0)
 scale = Vector2(0.26481476, 0.26481482)
 texture = ExtResource("2_ecqtd")
-
-[node name="Camera2D" type="Camera2D" parent="."]

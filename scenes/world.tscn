@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=4 uid="uid://7evstgekap24"]
+[gd_scene load_steps=16 format=4 uid="uid://7evstgekap24"]
 
 [ext_resource type="PackedScene" uid="uid://dfqg8lp0roiv5" path="res://scenes/spawn.tscn" id="1_4wyf3"]
-[ext_resource type="PackedScene" path="res://escape_pod.tscn" id="1_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://d20q2rs376ppe" path="res://escape_pod.tscn" id="1_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://dl5med4hn5t14" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="Script" uid="uid://dargdb0tx03tu" path="res://scenes/world.gd" id="1_o8fc1"]
 [ext_resource type="Texture2D" uid="uid://dbkw3tcrhqdfj" path="res://assets/tilesets/black.png" id="1_qfnet"]
 [ext_resource type="PackedScene" uid="uid://bigqhxi0wvssu" path="res://scenes/stress.tscn" id="2_k0juu"]
 [ext_resource type="PackedScene" uid="uid://dydgfkvsxwllk" path="res://scenes/thirdRoom.tscn" id="3_71j4m"]
@@ -11,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bklmu8kv2r8e8" path="res://scenes/cafeteria.tscn" id="8_4mrxx"]
 [ext_resource type="PackedScene" uid="uid://ihtodum1r4j2" path="res://scenes/escapeRoom.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://45an4hhuul2k" path="res://scenes/alien.tscn" id="10_w7kh3"]
-[ext_resource type="PackedScene" path="res://key.tscn" id="12_q5onr"]
+[ext_resource type="PackedScene" uid="uid://dwy5f53ojb1fr" path="res://key.tscn" id="12_q5onr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7141"]
 texture = ExtResource("1_qfnet")
@@ -62,6 +63,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="World" type="Node2D" parent="."]
+script = ExtResource("1_o8fc1")
 
 [node name="Key" parent="World" instance=ExtResource("12_q5onr")]
 z_index = 1
@@ -100,9 +102,6 @@ light_mask = 3
 visibility_layer = 3
 z_index = 2
 position = Vector2(9, 17)
-speed = 200.0
-can_use_tight_beam = true
-is_tight_beam_active = false
 
 [node name="Camera2D" type="Camera2D" parent="World/player"]
 

@@ -1,11 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://dl5med4hn5t14"]
+[gd_scene load_steps=25 format=3 uid="uid://dl5med4hn5t14"]
 
 [ext_resource type="Script" uid="uid://bq7h68rkqacne" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://cm0sl3i4elo2k" path="res://assets/run-back-Sheet.png" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://cc7xnteo5jr34" path="res://assets/player_animations/run-forward-Sheet.png" id="2_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://cj8bo5u4jx1sa" path="res://assets/player_animations/run-LR-smooth-Sheet.png" id="3_fjrip"]
 [ext_resource type="Texture2D" uid="uid://do0eb44xkqo87" path="res://assets/smallerroundcone.png" id="3_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://cdij2pi4qero6" path="res://AudioController.tscn" id="6_tuyoq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8txt3"]
 atlas = ExtResource("2_dqkch")
@@ -191,7 +190,5 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitArea"]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_tuyoq")
-
-[node name="Node2D" parent="." instance=ExtResource("6_tuyoq")]
 
 [connection signal="body_entered" from="hitArea" to="." method="_on_hit_area_body_entered"]

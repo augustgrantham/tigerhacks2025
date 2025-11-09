@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://7evstgekap24"]
+[gd_scene load_steps=14 format=4 uid="uid://7evstgekap24"]
 
 [ext_resource type="PackedScene" uid="uid://dfqg8lp0roiv5" path="res://scenes/spawn.tscn" id="1_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://d20q2rs376ppe" path="res://escape_pod.tscn" id="1_e3hyu"]
 [ext_resource type="PackedScene" uid="uid://dl5med4hn5t14" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://dbkw3tcrhqdfj" path="res://assets/tilesets/black.png" id="1_qfnet"]
 [ext_resource type="PackedScene" uid="uid://bigqhxi0wvssu" path="res://scenes/stress.tscn" id="2_k0juu"]
@@ -55,8 +56,13 @@ sources/0 = SubResource("TileSetAtlasSource_i7141")
 
 [node name="World" type="Node2D"]
 
+[node name="EscapePod" parent="." instance=ExtResource("1_e3hyu")]
+light_mask = 3
+visibility_layer = 3
+z_index = 1
+position = Vector2(997, -263)
+
 [node name="MakeitBright" type="DirectionalLight2D" parent="."]
-visible = false
 energy = 2.8
 
 [node name="rooms" type="Node" parent="."]
@@ -84,12 +90,32 @@ tile_set = SubResource("TileSet_71j4m")
 [node name="makeitAllDark" type="CanvasModulate" parent="."]
 color = Color(0.5370113, 0.5370113, 0.5370113, 1)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("10_w7kh3")]
-position = Vector2(122, -35)
-
 [node name="player" parent="." instance=ExtResource("1_nnsk1")]
 light_mask = 3
 visibility_layer = 3
 z_index = 2
 
 [node name="Camera2D" type="Camera2D" parent="player"]
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="Alien 1" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(373, 339)
+
+[node name="Alien 2" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(404, 0)
+
+[node name="Alien 3" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(369, -326)
+
+[node name="Alien 4" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(834, 14)
+
+[node name="Alien 5" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(1228, 290)
+
+[node name="Alien 6" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(1659, 186)
+
+[node name="Alien 7" parent="Enemies" instance=ExtResource("10_w7kh3")]
+position = Vector2(1646, -223)

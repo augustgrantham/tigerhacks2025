@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://d20q2rs376ppe"]
+
+[ext_resource type="Texture2D" uid="uid://c8wet3aeitgvn" path="res://assets/tilesets/escapePod.png" id="1_dlhiv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c3o0n"]
+size = Vector2(120.625, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlhiv"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.3125, 1.5)
+shape = SubResource("RectangleShape2D_c3o0n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.8146973e-06, 5.722046e-06)
+scale = Vector2(0.74822694, 0.74822694)
+texture = ExtResource("1_dlhiv")
+
+[node name="exitBlock" type="CollisionShape2D" parent="."]
+position = Vector2(0, 85)
+shape = SubResource("RectangleShape2D_dlhiv")

@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=4 uid="uid://ihtodum1r4j2"]
+[gd_scene load_steps=32 format=4 uid="uid://ihtodum1r4j2"]
 
 [ext_resource type="Texture2D" uid="uid://blabyp8jgmxql" path="res://assets/tilesets/scifi/SciFi_Warehouse_A2.png" id="1_kvb7w"]
 [ext_resource type="Texture2D" uid="uid://kph35xt1s67m" path="res://assets/objects/objects.png" id="2_d8rni"]
 [ext_resource type="Texture2D" uid="uid://c1sosqgrvvmxk" path="res://assets/tilesets/greywallslittle.png" id="3_g5k6k"]
 [ext_resource type="Texture2D" uid="uid://blsaiaswa6jak" path="res://assets/tilesets/corners.png" id="4_wdbgp"]
+[ext_resource type="Texture2D" path="res://assets/Spaceship_Asset.png" id="5_d8rni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_auw1c"]
 texture = ExtResource("1_kvb7w")
@@ -3681,3 +3682,10 @@ tile_set = SubResource("TileSet_eilec")
 position = Vector2(314, -356)
 tile_map_data = PackedByteArray("AAAiAAQAAAAAAAEAAAAiAAUAAAAAAAEAAAAiAAYAAAAAAAEAAAAiAAcAAAAAAAEAAAAiAAgAAAAAAAEAAAAiAAkAAAAAAAEAAAAiAAoAAAAAAAEAAAAiAAsAAAAAAAEAAAAiAAwAAAAAAAEAAAAiAA0AAAAAAAEAAAAiAA4AAAAAAAEAAABIAAMAAAAFAAEAAABIAAQAAAAFAAEAAABIAAoAAAAFAAEAAABIAAsAAAAFAAEAAABIAAwAAAAFAAEAAABIAA0AAAAFAAEAAABIAA4AAAAFAAEAAAAiAAMAAAAAAAEAAAAiAAIAAAAAAAEAAABIAAIAAAAFAAEAAAAiAAEAAAAAAAEAAABIAAEAAAAFAAEAAAAiAAAAAAABAAUAAAAjAAAAAAABAAUAAAAkAAAAAAABAAUAAAAlAAAAAAABAAUAAAAmAAAAAAABAAUAAAAnAAAAAAABAAUAAAAoAAAAAAABAAUAAAApAAAAAAABAAUAAAAqAAAAAAABAAUAAAArAAAAAAABAAUAAAAsAAAAAAABAAUAAAAtAAAAAAABAAUAAAAuAAAAAAABAAUAAAAvAAAAAAABAAUAAAAwAAAAAAABAAUAAAAxAAAAAAABAAUAAAAyAAAAAAABAAUAAAAzAAAAAAABAAUAAAA0AAAAAAABAAUAAAA1AAAAAAABAAUAAAA2AAAAAAABAAUAAAA3AAAAAAABAAUAAAA4AAAAAAABAAUAAAA5AAAAAAABAAUAAAA6AAAAAAABAAUAAAA7AAAAAAABAAUAAAA8AAAAAAABAAUAAAA9AAAAAAABAAUAAAA+AAAAAAABAAUAAAA/AAAAAAABAAUAAABAAAAAAAABAAUAAABBAAAAAAABAAUAAABCAAAAAAABAAUAAABDAAAAAAABAAUAAABEAAAAAAABAAUAAABFAAAAAAABAAUAAABGAAAAAAABAAUAAABHAAAAAAABAAUAAABIAAAAAAABAAUAAAA=")
 tile_set = SubResource("TileSet_it5g2")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("5_d8rni")

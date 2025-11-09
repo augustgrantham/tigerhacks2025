@@ -134,5 +134,5 @@ func on_take_damage():
 	for i in 4:
 		modulate = Color(1.0, 0.063, 0.035)
 		await get_tree().create_timer(0.5).timeout
-		self_modulate = Color(1.0, 1.0, 1.0)
+		modulate = Color(1.0, 1.0, 1.0)
 		

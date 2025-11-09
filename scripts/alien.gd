@@ -31,7 +31,6 @@ func _physics_process(delta):
 	move_and_slide()
 # --- Area Detection Functions ---
 func _on_detection_area_body_entered(body):
-	print("Detected body: ", body.name) # Check the Output panel for this line
 	# Good practice: Add a check to ensure you're only chasing the player
 	if body.name == "player": # or check its group, e.g., 'if body.is_in_group("player"):'
 		player = body

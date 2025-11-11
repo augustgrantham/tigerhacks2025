@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://jq0m7q1dyar2"]
 
-[ext_resource type="Script" uid="uid://cdh42dkib8g6n" path="res://scenes/win_scene.gd" id="1_aw8vk"]
+[ext_resource type="Script" uid="uid://cdh42dkib8g6n" path="res://scripts/win_scene.gd" id="1_aw8vk"]
 [ext_resource type="Texture2D" uid="uid://m33gt0iwv0yh" path="res://menus/4.png" id="2_ecqtd"]
 
 [node name="Win Scene" type="Control"]

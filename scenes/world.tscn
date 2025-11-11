@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ihtodum1r4j2" path="res://scenes/escapeRoom.tscn" id="9_7r4gi"]
 [ext_resource type="PackedScene" uid="uid://45an4hhuul2k" path="res://scenes/alien.tscn" id="10_w7kh3"]
 [ext_resource type="PackedScene" uid="uid://dvaeftnowthcy" path="res://scenes/escape_pod.tscn" id="12_jhx03"]
-[ext_resource type="PackedScene" uid="uid://dwy5f53ojb1fr" path="res://key.tscn" id="12_q5onr"]
+[ext_resource type="PackedScene" uid="uid://dwy5f53ojb1fr" path="res://scenes/key.tscn" id="12_q5onr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i7141"]
 texture = ExtResource("1_qfnet")
@@ -61,15 +61,15 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="MAPDEBUG" type="DirectionalLight2D" parent="."]
+visible = false
+energy = 2.8
+
 [node name="World" type="Node2D" parent="."]
 
 [node name="Key" parent="World" instance=ExtResource("12_q5onr")]
 z_index = 1
 position = Vector2(1123, 273)
-
-[node name="MakeitBright" type="DirectionalLight2D" parent="World"]
-visible = false
-energy = 2.8
 
 [node name="rooms" type="Node" parent="World"]
 
@@ -126,6 +126,6 @@ position = Vector2(1659, 186)
 [node name="Alien 7" parent="World/Enemies" instance=ExtResource("10_w7kh3")]
 position = Vector2(1646, -223)
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("12_jhx03")]
+[node name="EscapePod" parent="World" instance=ExtResource("12_jhx03")]
 z_index = 1
-position = Vector2(1212, -281)
+position = Vector2(1228, -298)

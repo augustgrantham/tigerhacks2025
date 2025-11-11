@@ -13,18 +13,17 @@ config_version=5
 config/name="demo"
 run/main_scene="uid://dhn1rr67feg3a"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
 
 [autoload]
 
-global="*res://global.gd"
-AudioController="*res://AudioController.tscn"
+global="*res://scripts/global.gd"
+AudioController="*res://scenes/AudioController.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=4
 window/size/borderless=true
 window/stretch/scale=4.0
 window/vsync/vsync_mode=0

@@ -1,7 +1,0 @@
-[gd_resource type="CollisionShape" load_steps=1 format=3 uid="uid://b00g0g0g0g0g"]
-[resource]
-# This defines the vertices of the polygon.
-# The points are defined relative to the node's position (0, 0).
-# The shape is a large, symmetrical triangle (cone) that is 1000 units tall 
-# and 800 units wide.
-polygon = PackedVector2Array(0, 0, -400, 1000, 400, 1000)

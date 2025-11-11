@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3onrl1kpl606"]
 
-[ext_resource type="Script" uid="uid://bna286k74p3nm" path="res://scenes/credits.gd" id="1_2ckv8"]
+[ext_resource type="Script" uid="uid://bna286k74p3nm" path="res://scripts/credits.gd" id="1_2ckv8"]
 [ext_resource type="Texture2D" uid="uid://dhgh5jq2nxxio" path="res://menus/DarkShip.png" id="2_0ctdu"]
 [ext_resource type="VideoStream" uid="uid://dmdjswd612q2m" path="res://menus/Credits.ogv" id="3_0ctdu"]
 

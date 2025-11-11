@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://5uap056ot43n"]
 
 [ext_resource type="Texture2D" uid="uid://dvxtb828w1uo7" path="res://menus/6.png" id="1_mykn2"]
-[ext_resource type="Script" uid="uid://b7rx5aea3u0v2" path="res://lose_menu.gd" id="1_wu46t"]
+[ext_resource type="Script" uid="uid://b7rx5aea3u0v2" path="res://scripts/lose_menu.gd" id="1_wu46t"]
 
 [node name="Lose Menu" type="Control"]
 layout_mode = 3

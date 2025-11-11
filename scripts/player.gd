@@ -28,8 +28,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("flashlight_toggle"):
 		if can_use_tight_beam:
 			activate_tight_beam()
-		else:
-			print("Tight beam is on cooldown!")
 
 
 func activate_tight_beam():
@@ -133,7 +131,6 @@ func play_anim(movement):
 
 func _on_hit_area_body_entered(body: Node2D) -> void:
 	if(body.name.begins_with("Alien")):
-		print("youch")
 		health -= 1
 		on_take_damage()
 		if(health <= 0):

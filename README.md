@@ -1,3 +1,4 @@
+![Dark Ship Screenshot](title_screen.png)
 # Dark Ship 
 ### - A top down horror survival game built in 39 hours for Mizzou's TigerHacks 2025
 

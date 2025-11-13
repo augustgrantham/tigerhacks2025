@@ -31,7 +31,7 @@ You are the last one on your spaceship after the rest of the crew gets taken out
 * **August Grantham** - Lead programmer
 * **Shawn Gurusinghe** - Lead programmer
 * **Sarah Merino** - Head of Art & Design, cowriter
-* **Blake Roettgen** -Head of Sound Design, cowriter
+* **Blake Roettgen** - Head of Sound Design, cowriter
 
 ## 📚 Lessons Learned
 

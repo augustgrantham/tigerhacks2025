@@ -8,8 +8,7 @@ Play it here! https://augustgrantham.itch.io/dark-ship
 
 ## 🕹️ Overview
 Dark Ship is an atmospheric horror game built in the Godot engine during Mizzou's 2025 TigerHacks competition.
-The goal is to find the key to your escape pod, while fighting the extraterrestrial  mob that has 
-attacked your ship.
+You are the last one on your spaceship after the rest of the crew gets taken out by the alien invasion. Eliminate enemies by shining your flashlight at them while in search for a key to the escape pod.
 
 ## 🌌 Features
 * Dynamic flashlight lighting and shadows
@@ -17,10 +16,15 @@ attacked your ship.
 * Custom player and enemy sprites
 * Ambient sound design and narrative atmosphere
 
+## 🎮 Controls
+
+* WASD to move
+* Mouse to aim flashlight 
+* 
 ## ⚙️ Tech Stack
 * **Engine**: Godot 4
 * **Language**: GDScript
-* **Assets**: Asesprite, itch.io, Canva
+* **Assets**: Libresprite, itch.io, Canva
 * **Version Control**: Git
 
 ## 👥 Team
@@ -37,4 +41,10 @@ attacked your ship.
 
 ## 🚀 Next Steps
 * Polish gameplay and visuals
-* Add more enemies, boss fight, and sliding doors
+* Add more enemies
+* Add sliding doors that lock you into each room until you defeat the enemies
+* incorporate unused assets created during hackathon that did not make it in the final submission
+
+## Assets 
+* https://game-endeavor.itch.io/mystic-woods - prototype assets
+* https://psychronic.itch.io/galacti-chrons-sci-fi-warehouse-tileset - tile set

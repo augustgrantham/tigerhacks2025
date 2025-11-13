@@ -20,7 +20,8 @@ You are the last one on your spaceship after the rest of the crew gets taken out
 
 * WASD to move
 * Mouse to aim flashlight 
-* 
+* Left mouse button to burn aliens
+
 ## ⚙️ Tech Stack
 * **Engine**: Godot 4
 * **Language**: GDScript

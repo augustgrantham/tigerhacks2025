@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cp4k6a0e44m8m" path="res://scripts/menu.gd" id="1_upctu"]
 [ext_resource type="Texture2D" uid="uid://ch635ip1t3rn3" path="res://assets/start.png" id="2_11y2r"]
-[ext_resource type="VideoStream" uid="uid://cnjhgu47wcdar" path="res://menus/Menu.ogv" id="3_11y2r"]
+[ext_resource type="VideoStream" path="res://menus/Menu.ogv" id="3_11y2r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
